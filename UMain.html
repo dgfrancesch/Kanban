@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Kanban Project</title>
+    <style>
+    </style>
+  </head>
+  <body>
+<div class="container py-4">
+  <h1 class="mb-4">Kanban</h1>
+
+  <div class="input-group mb-4">
+    <input id="txtTarea" class="form-control" placeholder="Nueva tarea...">
+    <button id="btnAgregar" class="btn btn-primary">Agregar</button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h5 class="titulo-col">Por hacer</h5>
+      <div id="colPendiente" class="columna columna-pendiente"></div>
+    </div>
+    <div class="col-md-4">
+      <h5 class="titulo-col">En proceso</h5>
+      <div id="colProceso" class="columna columna-proceso"></div>
+    </div>
+    <div class="col-md-4">
+      <h5 class="titulo-col">Hecho</h5>
+      <div id="colHecho" class="columna columna-hecho"></div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

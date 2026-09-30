@@ -1,0 +1,100 @@
+
+:root {
+  --fondo: #0f172a;
+  --superficie: #1e293b;
+  --borde: #334155;
+  --texto: #e2e8f0;
+  --texto-suave: #94a3b8;
+  --acento: #6366f1;
+  --pendiente: #f59e0b;
+  --proceso: #38bdf8;
+  --hecho: #22c55e;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e1b4b);
+  background-attachment: fixed;
+  color: var(--texto);
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* ===== Input y botón ===== */
+.form-control {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  color: var(--texto);
+}
+.form-control::placeholder { color: var(--texto-suave); }
+.form-control:focus {
+  background: var(--superficie);
+  color: var(--texto);
+  border-color: var(--acento);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.btn-primary {
+  background: var(--acento);
+  border: none;
+  font-weight: 600;
+}
+.btn-primary:hover { background: #4f46e5; }
+
+/* ===== Columnas ===== */
+.columna {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-top: 4px solid var(--borde);
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 300px;
+}
+.columna-pendiente { border-top-color: var(--pendiente); }
+.columna-proceso   { border-top-color: var(--proceso); }
+.columna-hecho     { border-top-color: var(--hecho); }
+
+.titulo-col {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--texto-suave);
+  margin-bottom: 10px;
+}
+
+/* ===== Tarjetas (las usaremos cuando dibujemos tareas desde Pascal) ===== */
+.tarjeta {
+  background: #0f172a;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.tarjeta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.tarjeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.acciones { display: flex; gap: 4px; flex-shrink: 0; }
+.acciones button {
+  background: transparent;
+  border: 1px solid var(--borde);
+  color: var(--texto-suave);
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+.acciones button:hover { color: var(--texto); border-color: var(--acento); }
+.acciones button[data-accion="borrar"]:hover { color: #ef4444; border-color: #ef4444; }
